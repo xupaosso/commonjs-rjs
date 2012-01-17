@@ -1,4 +1,14 @@
+#!/bin/sh
+
+# clear out the old stuff
+rm -rf built/*
+
+# convert commonjs-style to amd
 node_modules/requirejs/bin/r.js -convert app/ built/
+
+# trace dependencies and concat deps
 node_modules/requirejs/bin/r.js -o config.js
+
+# make a single file out of the almond loader and the app
 cat almond.js built/main.js >> built/app.js
 
