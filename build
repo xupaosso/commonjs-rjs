@@ -1,0 +1,4 @@
+node_modules/requirejs/bin/r.js -convert app/ built/
+node_modules/requirejs/bin/r.js -o config.js
+cat almond.js built/main.js >> built/app.js
+

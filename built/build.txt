@@ -1,0 +1,7 @@
+
+main.js
+----------------
+foo.js
+bar.js
+baz.js
+main.js
